@@ -52,7 +52,7 @@ export default function TrustedCompanies() {
   }
 
   return (
-    <div className="bg-[#0A0A0B] text-white py-8 overflow-hidden">
+    <div className="bg-[#181c31] text-white py-8 overflow-hidden">
       <div className="container mx-auto px-4">
         <h2 className="text-2xl md:text-3xl font-bold text-center mb-8">
           Trusted by Learners Working At Top Companies Like

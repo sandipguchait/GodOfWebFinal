@@ -17,7 +17,7 @@ const HeroSection = () => {
   ]
 
   return (
-    <div className="bg-[#0A0A0B] text-white p-8">
+    <div className="bg-[#181c31] text-white p-8">
       <div className="max-w-7xl mx-auto mt-4">
         <div className="flex flex-col lg:flex-row items-center justify-between mb-16">
           <div className="lg:w-1/2 space-y-8">
@@ -64,7 +64,7 @@ const HeroSection = () => {
           </h2>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
             {companyLogos.map((logo, index) => (
-              <div key={index} className="bg-[#1C1C1E] p-4 rounded-lg flex items-center justify-center">
+              <div key={index} className="bg-[#223150] p-4 rounded-lg flex items-center justify-center">
                 <Image
                   src={logo.src}
                   alt={logo.name}

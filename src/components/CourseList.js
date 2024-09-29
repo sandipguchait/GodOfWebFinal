@@ -26,25 +26,7 @@ const courses = [
     description: 'Learn how to build awesome full-stack apps with SvelteKit',
     logo: '/placeholder.svg',
     tags: ['svelte', 'firebase', 'pro'],
-  },
-  {
-    title: 'SVELTEKIT FULL COURSE',
-    description: 'Learn how to build awesome full-stack apps with SvelteKit',
-    logo: '/placeholder.svg',
-    tags: ['svelte', 'firebase', 'pro'],
-  },
-  {
-    title: 'SVELTEKIT FULL COURSE',
-    description: 'Learn how to build awesome full-stack apps with SvelteKit',
-    logo: '/placeholder.svg',
-    tags: ['svelte', 'firebase', 'pro'],
-  },
-  {
-    title: 'SVELTEKIT FULL COURSE',
-    description: 'Learn how to build awesome full-stack apps with SvelteKit',
-    logo: '/placeholder.svg',
-    tags: ['svelte', 'firebase', 'pro'],
-  },
+  }
 ]
 
 const tagColors = {
@@ -61,7 +43,7 @@ const tagColors = {
 
 export default function CourseList() {
   return (
-    <div className="bg-[#0A0A0B] text-white py-16">
+    <div className="bg-[#181c31] text-white py-16">
       <div className="container mx-auto px-4">
         <h2 className="text-4xl font-bold text-center mb-2">COURSES</h2>
         <p className="text-gray-400 text-center mb-12">
@@ -71,7 +53,7 @@ export default function CourseList() {
           {courses.map((course, index) => (
             <div 
               key={index} 
-              className="bg-[#1C1C1E] rounded-lg overflow-hidden flex flex-col transform transition-all duration-300 hover:scale-105 hover:-translate-y-2 shadow-[0_0_0_1px_rgba(0,149,255,0.2)] hover:shadow-[0_0_0_2px_rgba(0,149,255,0.4)]"
+              className="bg-[#1c2136] rounded-lg overflow-hidden flex flex-col transform transition-all duration-300 hover:scale-105 hover:-translate-y-2 shadow-[0_0_0_1px_rgba(0,149,255,0.2)] hover:shadow-[0_0_0_2px_rgba(0,149,255,0.4)]"
             >
               <div className="relative h-40 sm:h-48 w-full">
                 <Image
