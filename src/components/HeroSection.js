@@ -58,24 +58,25 @@ const HeroSection = () => {
             </div>
           </div>
           <div className="lg:w-1/3 mt-8 lg:mt-0 space-y-8">
-          <h2 className="text-2xl md:text-3xl font-bold mb-6 text-center sm:text-left">
-            Are these some nameless websites? Who are these companies?<br />
-            Take a look.
-          </h2>
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
-            {companyLogos.map((logo, index) => (
-              <div key={index} className="bg-[#223150] p-4 rounded-lg flex items-center justify-center">
-                <Image
-                  src={logo.src}
-                  alt={logo.name}
-                  width={80}
-                  height={80}
-                  className="max-w-full h-auto"
-                />
-              </div>
-            ))}
+            <h2 className="text-2xl sm:text-left text-center md:text-3xl lg:text-4xl font-bold mb-6 leading-tight">
+              Are these some <span className="text-[#4D9CFF]">nameless</span> websites?<br />
+              Who are these <span className="text-[#A855F7]">companies</span>?<br />
+              Take a <span className="text-[#4D9CFF]">look</span>.
+            </h2>
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+              {companyLogos.map((logo, index) => (
+                <div key={index} className="bg-[#223150] p-4 rounded-lg flex items-center justify-center">
+                  <Image
+                    src={logo.src}
+                    alt={logo.name}
+                    width={80}
+                    height={80}
+                    className="max-w-full h-auto"
+                  />
+                </div>
+              ))}
+            </div>
           </div>
-        </div>
         </div>
       </div>
     </div>

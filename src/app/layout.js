@@ -2,7 +2,8 @@
 
 import './globals.css'
 import { Poppins } from 'next/font/google'
-import Header from '@/components/layout/Header'
+import Header from '@/components/layout/Header';
+import Footer from '@/components/Footer';
 import { SITE_NAME, SITE_DESCRIPTION, LANG, MAIN_CONTAINER_CLASS } from '@/constants'
 
 const poppins = Poppins({
@@ -30,7 +31,7 @@ export default function RootLayout({ children }) {
           {children}
         </main>
         <footer>
-          {/* Add your footer content here */}
+          <Footer />
         </footer>
       </body>
     </html>

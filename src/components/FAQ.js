@@ -27,7 +27,7 @@ export default function FAQ() {
   }
 
   return (
-    <div className="bg-gradient-to-br from-[#0A0A0B] via-[#1A1A2E] to-[#16213E] text-white py-24 px-4 relative overflow-hidden">
+    <div className="bg-[#181c31] text-white py-24 px-4 relative overflow-hidden">
       <div className="container mx-auto px-4 relative z-10">
         <div className="flex flex-col lg:flex-row justify-between items-start">
           <div className="lg:w-1/3 mb-12 lg:mb-0">
