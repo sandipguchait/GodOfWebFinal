@@ -55,7 +55,7 @@ export default function FAQ() {
                   className="flex justify-between items-center w-full text-left p-6 bg-[#1C1C1E] rounded-lg hover:bg-[#2C2C2E] transition-colors duration-300 shadow-md hover:shadow-lg"
                   onClick={() => toggleFAQ(index)}
                 >
-                  <span className="text-lg font-semibold pr-4">{faq.question}</span>
+                  <span className="text-lg font-medium pr-4">{faq.question}</span>
                   {openIndex === index ? (
                     <Minus className="h-6 w-6 text-[#4D9CFF] flex-shrink-0" />
                   ) : (

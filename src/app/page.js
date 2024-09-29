@@ -14,8 +14,8 @@ export default function Home() {
     <main>
       <HeroSection />
       <TrustedCompanies />
-      <CourseList />
       <TrustedByCompanies />
+      <CourseList />
       {/* <JoinUs /> */}
       <FAQ />
     </main>

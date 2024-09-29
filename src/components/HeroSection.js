@@ -39,26 +39,26 @@ const HeroSection = () => {
                 Dev Career Accelerator →
               </button>
             </div>
-            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
-              <div className="flex items-center">
+            <div className="flex flex-col sm:flex-row items-center sm:items-center gap-4">
+              <div className="flex items-center justify-center w-full sm:w-auto">
                 <Star className="w-5 h-5 text-green-500" fill="currentColor" />
                 <Star className="w-5 h-5 text-green-500" fill="currentColor" />
                 <Star className="w-5 h-5 text-green-500" fill="currentColor" />
                 <Star className="w-5 h-5 text-green-500" fill="currentColor" />
                 <Star className="w-5 h-5 text-green-500" fill="currentColor" />
               </div>
-              <p className="text-sm text-gray-400">TrustScore 4.8 1,982 reviews</p>
-              <div className="flex items-center gap-2">
+              <p className="text-sm text-gray-400 text-center sm:text-left">TrustScore 4.8 1,982 reviews</p>
+              <div className="flex items-center justify-center w-full sm:w-auto gap-2">
                 <Youtube className="w-5 h-5 text-red-500" />
                 <span className="text-sm">900k</span>
                 <Linkedin className="w-5 h-5 text-blue-500" />
                 <span className="text-sm">200k</span>
               </div>
-              <p className="text-sm text-gray-400">Followers & subscribers</p>
+              <p className="text-sm text-gray-400 text-center sm:text-left">Followers & subscribers</p>
             </div>
           </div>
           <div className="lg:w-1/3 mt-8 lg:mt-0 space-y-8">
-          <h2 className="text-2xl md:text-3xl font-bold mb-6">
+          <h2 className="text-2xl md:text-3xl font-bold mb-6 text-center sm:text-left">
             Are these some nameless websites? Who are these companies?<br />
             Take a look.
           </h2>
