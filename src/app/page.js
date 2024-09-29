@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import HeroSection from '@/components/HeroSection'
 import TrustedCompanies from '@/components/TrustedCompanies'
 import CourseList from '@/components/CourseList'
