@@ -6,7 +6,7 @@ import CourseList from '@/components/CourseList'
 import TrustedByCompanies from '@/components/TrustedByCompanies'
 import JoinUs from '@/components/JoinUs'
 import FAQ from '@/components/FAQ'
-
+import Testimonials from '@/components/Testimonials'
 
 
 export default function Home() {
@@ -17,6 +17,7 @@ export default function Home() {
       <TrustedByCompanies />
       <CourseList />
       {/* <JoinUs /> */}
+      <Testimonials />
       <FAQ />
     </main>
   )

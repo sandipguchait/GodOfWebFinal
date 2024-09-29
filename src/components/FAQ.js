@@ -17,6 +17,10 @@ const faqs = [
     question: "Can I access the platform on mobile devices?",
     answer: "Our platform is fully responsive and optimized for mobile devices. We also offer native iOS and Android apps for an enhanced mobile experience, allowing you to learn and work on-the-go."
   },
+  {
+    question: "What sets your courses apart from others?",
+    answer: "Our courses are designed by industry experts and updated regularly to reflect the latest trends and technologies. We offer hands-on projects, personalized feedback, and a supportive community to ensure you gain practical, job-ready skills."
+  }
 ]
 
 export default function FAQ() {
@@ -35,13 +39,9 @@ export default function FAQ() {
             <h2 className="text-4xl lg:text-5xl font-bold mb-6 leading-tight">
               Frequently Asked <span className="text-[#A855F7]">Questions</span>
             </h2>
-            <p className="text-gray-300 mb-8">
+            <p className="text-gray-300 pr-4 ">
               Find quick answers to common questions about our platform, courses, and support.
             </p>
-            <button className="group flex items-center bg-[#4D9CFF] text-white py-3 px-6 rounded-full hover:bg-[#3D7CC8] transition-all duration-300 shadow-lg hover:shadow-xl">
-              <span className="mr-2">Know More</span>
-              <ArrowRight className="h-5 w-5 transform group-hover:translate-x-1 transition-transform duration-300" />
-            </button>
           </div>
           <div className="lg:w-2/3 space-y-6">
             {faqs.map((faq, index) => (
@@ -50,9 +50,10 @@ export default function FAQ() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="border border-[#4D9CFF]/20 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300"
               >
                 <button
-                  className="flex justify-between items-center w-full text-left p-6 bg-[#1C1C1E] rounded-lg hover:bg-[#2C2C2E] transition-colors duration-300 shadow-md hover:shadow-lg"
+                  className="flex justify-between items-center w-full text-left p-6 bg-[#1C1C1E] hover:bg-[#2C2C2E] transition-colors duration-300"
                   onClick={() => toggleFAQ(index)}
                 >
                   <span className="text-lg font-medium pr-4">{faq.question}</span>
