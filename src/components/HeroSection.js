@@ -32,20 +32,26 @@ const HeroSection = () => {
               you've always imagined
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <button className="px-6 py-3 bg-gradient-to-r from-[#4D9CFF] to-[#3E7EFF] rounded-lg text-white font-semibold hover:opacity-90 transition duration-300 flex items-center justify-center">
-                Ultimate Next.js 14 Course →
+              <button className="relative px-6 py-3 bg-gradient-to-r from-[#4ade80] via-[#3cba6f] to-[#2e9654] rounded-lg text-white font-semibold hover:opacity-90 transition duration-300 flex items-center justify-center overflow-hidden group">
+                <span className="relative z-10">Ultimate Next.js 14 Course →</span>
+                <span className="absolute inset-0 overflow-hidden">
+                  <span className="absolute inset-0 translate-x-[-100%] group-hover:animate-wave-flow bg-gradient-to-r from-transparent via-white/40 to-transparent skew-x-12 w-[200%]" />
+                </span>
               </button>
-              <button className="px-6 py-3 bg-gradient-to-r from-[#A855F7] to-[#8B5CF6] rounded-lg text-white font-semibold hover:opacity-90 transition duration-300 flex items-center justify-center">
-                Dev Career Accelerator →
+              <button className="relative px-6 py-3 bg-gradient-to-r from-[#A855F7] via-[#9d4ae8] to-[#8B5CF6] rounded-lg text-white font-semibold hover:opacity-90 transition duration-300 flex items-center justify-center overflow-hidden group">
+                <span className="relative z-10">Dev Career Accelerator →</span>
+                <span className="absolute inset-0 overflow-hidden">
+                  <span className="absolute inset-0 translate-x-[-100%] group-hover:animate-wave-flow bg-gradient-to-r from-transparent via-white/40 to-transparent skew-x-12 w-[200%]" />
+                </span>
               </button>
             </div>
             <div className="flex flex-col sm:flex-row items-center sm:items-center gap-4">
               <div className="flex items-center justify-center w-full sm:w-auto">
-                <Star className="w-5 h-5 text-green-500" fill="currentColor" />
-                <Star className="w-5 h-5 text-green-500" fill="currentColor" />
-                <Star className="w-5 h-5 text-green-500" fill="currentColor" />
-                <Star className="w-5 h-5 text-green-500" fill="currentColor" />
-                <Star className="w-5 h-5 text-green-500" fill="currentColor" />
+                <Star className="w-5 h-5 text-yellow-500" fill="currentColor" />
+                <Star className="w-5 h-5 text-yellow-500" fill="currentColor" />
+                <Star className="w-5 h-5 text-yellow-500" fill="currentColor" />
+                <Star className="w-5 h-5 text-yellow-500" fill="currentColor" />
+                <Star className="w-5 h-5 text-yellow-500" fill="currentColor" />
               </div>
               <p className="text-sm text-gray-400 text-center sm:text-left">TrustScore 4.8 1,982 reviews</p>
               <div className="flex items-center justify-center w-full sm:w-auto gap-2">

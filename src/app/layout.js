@@ -1,7 +1,7 @@
 /* eslint-disable */
 
 import './globals.css'
-import { Poppins } from 'next/font/google'
+import { Poppins } from 'next/font/google';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/Footer';
 import { SITE_NAME, SITE_DESCRIPTION, LANG, MAIN_CONTAINER_CLASS } from '@/constants'

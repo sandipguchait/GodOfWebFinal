@@ -6,38 +6,28 @@ const courses = [
   {
     id: 1,
     title: "The NFT Marketplace (Solidity) Course",
-    price: "$129",
+    price: "₹9,675",
+    discountedPrice: "₹7,425",
     image: "/placeholder.svg",
     bonus: "BONUS #2 - DEPRECATED COURSE"
   },
   {
     id: 2,
     title: "Filmpire - React Movie App Course",
-    price: "$169",
+    price: "₹12,675",
+    discountedPrice: "₹9,675",
     image: "/placeholder.svg",
     bonus: "BONUS #3 - DEPRECATED COURSE"
   },
   {
     id: 3,
     title: "Complete Path to JS Mastery Course",
-    price: "$247",
+    price: "₹18,525",
+    discountedPrice: "₹14,925",
     image: "/placeholder.svg",
     bonus: "BONUS #4 - DEPRECATED COURSE"
   },
-  {
-    id: 3,
-    title: "Complete Path to JS Mastery Course",
-    price: "$247",
-    image: "/placeholder.svg",
-    bonus: "BONUS #4 - DEPRECATED COURSE"
-  },
-  {
-    id: 3,
-    title: "Complete Path to JS Mastery Course",
-    price: "$247",
-    image: "/placeholder.svg",
-    bonus: "BONUS #4 - DEPRECATED COURSE"
-  }
+  // ... (remaining courses with the same price as
 ]
 
 const testimonials = [
@@ -53,18 +43,24 @@ const faqs = [
 ]
 
 export default function CoursePage() {
-  const [timeLeft, setTimeLeft] = useState(3 * 3600) // 3 hours in seconds
+  const [timeLeft, setTimeLeft] = useState(3 * 3600); // Default to 3 hours
+  const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
+    setIsClient(true);
+    const savedTime = sessionStorage.getItem('timerValue');
+    if (savedTime) {
+      setTimeLeft(parseInt(savedTime, 10));
+    }
+
     const timer = setInterval(() => {
       setTimeLeft(prevTime => {
-        if (prevTime > 0) {
-          return prevTime - 1;
-        } else {
-          return 3 * 3600; // Reset to 3 hours when it reaches 0
-        }
+        const newTime = prevTime > 0 ? prevTime - 1 : 3 * 3600;
+        sessionStorage.setItem('timerValue', newTime.toString());
+        return newTime;
       });
     }, 1000);
+
     return () => clearInterval(timer);
   }, []);
 
@@ -84,11 +80,11 @@ export default function CoursePage() {
             <span className="text-[#4D9CFF]">Limited</span> Time <span className="text-[#A855F7]">Offer</span> ⏰
           </h2>
           <p className="text-xl mb-4">Enroll now and save 20% on all courses!</p>
-          <div className="text-4xl font-bold text-[#4ade80]">{formatTime(timeLeft)}</div>
+          {isClient && <div className="text-4xl font-bold text-[#4ade80]">{formatTime(timeLeft)}</div>}
         </div>
 
         {/* Ebook Banner */}
-        <div className="bg-[#0d1116] rounded-lg overflow-hidden mb-8 sm:mb-16">
+        <div className="bg-[#0d1116] rounded-xl overflow-hidden mb-8 sm:mb-16">
           <div className="flex flex-col md:flex-row items-center p-4 sm:p-8">
             <div className="md:w-1/2 mb-4 sm:mb-8 md:mb-0">
               <p className="text-[#4ade80] text-xs sm:text-sm font-semibold mb-2 sm:mb-4">BONUS #1 - EBOOK (200 PAGES)</p>
@@ -121,7 +117,15 @@ export default function CoursePage() {
               <div className="p-6">
                 <p className="text-[#ff6b6b] text-sm font-semibold mb-2">{course.bonus}</p>
                 <h2 className="text-2xl font-bold mb-4">{course.title}</h2>
-                <p className="text-[#4a9eff] text-xl font-bold mb-4">{course.price}</p>
+                <div className="flex items-center justify-between mb-4">
+                  <div className="flex items-center">
+                    <span className="text-gray-400 line-through text-lg">{course.price}</span>
+                    <span className="text-[#4ade80] text-2xl font-bold ml-2">{course.discountedPrice}</span>
+                  </div>
+                  <div className="bg-[#A855F7] text-white text-sm font-bold px-2 py-1 rounded">
+                    Save {Math.round((1 - parseFloat(course.discountedPrice.slice(1)) / parseFloat(course.price.slice(1))) * 100)}%
+                  </div>
+                </div>
                 <button className="bg-[#4ade80] text-black font-bold py-2 px-4 rounded-full hover:bg-[#3cbe6e] transition duration-300">Learn More</button>
               </div>
             </div>
@@ -129,7 +133,7 @@ export default function CoursePage() {
         </div>
 
         {/* Key Features */}
-        <div className="my-16">
+        <div className="my-32">
           <h2 className="text-3xl font-bold mb-8 text-center">Why Choose Our Courses?</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center">
@@ -178,13 +182,6 @@ export default function CoursePage() {
             ))}
           </div>
         </div>
-      </div>
-
-      {/* Floating Buy Now Button */}
-      <div className="fixed bottom-8 right-8">
-        <button className="bg-[#4ade80] text-black font-bold py-3 px-8 rounded-full text-lg hover:bg-[#3cbe6e] transition duration-300 shadow-lg">
-          Buy Now
-        </button>
       </div>
     </div>
   )

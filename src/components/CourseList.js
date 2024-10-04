@@ -53,7 +53,7 @@ export default function CourseList() {
           {courses.map((course, index) => (
             <div 
               key={index} 
-              className="bg-[#1c2136] rounded-lg overflow-hidden flex flex-col transform transition-all duration-300 hover:scale-105 hover:-translate-y-2 shadow-[0_0_0_1px_rgba(0,149,255,0.2)] hover:shadow-[0_0_0_2px_rgba(0,149,255,0.4)]"
+              className="bg-[#0d1116] rounded-xl overflow-hidden flex flex-col transform transition-all duration-300 hover:scale-105 hover:-translate-y-2 shadow-[0_0_0_1px_rgba(0,149,255,0.2)] hover:shadow-[0_0_0_2px_rgba(0,149,255,0.4)]"
             >
               <div className="relative h-40 sm:h-48 w-full">
                 <Image
