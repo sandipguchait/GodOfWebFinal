@@ -2,7 +2,7 @@ export const SITE_NAME = '{JS MASTERY}'
 export const SITE_DESCRIPTION = 'Learn JavaScript and accelerate your dev career'
 
 export const NAV_LINKS = [
-  { href: '/course', label: 'Next.js 14 Course', className: 'hover:text-gray-300' },
+  { href: '/guides', label: 'Guides', className: 'hover:text-gray-300' },
   { href: '/accelerator', label: 'Dev Career Accelerator', className: 'text-[#4a9eff] hover:text-[#3a7fcf]' },
 ]
 
