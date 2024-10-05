@@ -10,7 +10,7 @@ export const HEADER_TITLE = SITE_NAME
 
 export const LANG = 'en'
 
-export const MAIN_CONTAINER_CLASS = 'container mx-auto px-4 py-8'
+export const MAIN_CONTAINER_CLASS = 'container mx-auto py-8'
 
 // Add more constants for other static text used across the website
 export const BUTTON_LABELS = {
