@@ -2,7 +2,10 @@
 import { useRouter} from 'next/navigation';
 import React, { useEffect, useState } from 'react';
 import Image from 'next/image'
-import { ArrowDown, CheckCircle } from 'lucide-react'
+import { ArrowDown, CheckCircle, Star } from 'lucide-react';
+import ReviewsSection from '../../../components/Review-landing';
+import PremiumSalaryStatisticsCard from '../../../components/SalaryStatsCard';
+import WhatWillYouGet from '../../../components/WhatWillYouGetCard';
 
 const GuidePage = ({ params }) => {
   const router = useRouter();
@@ -45,17 +48,26 @@ const GuidePage = ({ params }) => {
           </p>
         </div>
         
-        <div className="text-center space-y-6">
-          <div className="bg-[#1A1A1E] p-6 rounded-lg shadow-lg">
+        <div className="text-center flex flex-col items-center justify-center space-y-6">
+          <div className="rounded-lg bg-card w-full max-w-md bg-gradient-to-br from-gray-800 to-gray-900 text-white shadow-xl border-0 py-5">
             <p className="text-2xl font-bold mb-2">Limited Time Offer ⚡</p>
             <div className="flex justify-center items-center space-x-4">
               <span className="text-gray-400 line-through text-xl">₹{originalPrice}</span>
               <span className="text-4xl font-bold text-[#4D9CFF]">₹{discountedPrice}</span>
             </div>
             <p className="text-[#4ADE80] font-semibold mt-2">Save {percentageSaved}% Today!</p>
-            <button className={`mt-4 px-8 py-4 bg-gradient-to-r from-[#4ADE80] to-[#2B7A4D] rounded-full text-white font-bold text-lg  focus:outline-none focus:ring-2 focus:ring-[#4ADE80] focus:ring-opacity-50`}>
+            <button className={`mt-4 px-8 py-4 bg-gradient-to-r from-[#4ADE80] to-[#2B7A4D] rounded-full text-white font-bold text-lg shadow-md focus:outline-none focus:ring-2 focus:ring-[#4ADE80] focus:ring-opacity-50`}>
               Get Yours Now!
             </button>
+            
+            <div className="flex items-center justify-center mt-4 text-white">
+              <p className="text-lg">3670+ sold</p>
+              <div className="flex ml-2">
+              {[...Array(5)].map((_, i) => (
+                <Star key={i} className="w-5 h-5 text-yellow-500 fill-current" />
+               ))}
+              </div>
+            </div>
           </div>
           
           <div className="flex flex-col items-center space-y-2">
@@ -75,6 +87,9 @@ const GuidePage = ({ params }) => {
             </a>
           </div>
         </div>
+        <PremiumSalaryStatisticsCard/>
+        <WhatWillYouGet/>
+        <ReviewsSection/>
       </div>
     </div>
   );
