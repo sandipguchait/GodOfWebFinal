@@ -29,7 +29,7 @@ const PremiumSalaryStatisticsCard = () => {
                 <div className="text-gray-400">₹393k</div>
               </div>
               <div className="text-center">
-                <div className="font-semibold text-teal-400">MEDIAN</div>
+                <div className="font-semibold text-green-400">MEDIAN</div>
                 <div className="text-gray-400">₹1285k</div>
               </div>
               <div className="text-center">

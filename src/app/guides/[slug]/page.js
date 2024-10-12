@@ -2,10 +2,11 @@
 import { useRouter} from 'next/navigation';
 import React, { useEffect, useState } from 'react';
 import Image from 'next/image'
-import { ArrowDown, CheckCircle, Star } from 'lucide-react';
+import { ArrowDown, CheckCircle, Star , GraduationCap} from 'lucide-react';
 import ReviewsSection from '../../../components/Review-landing';
 import PremiumSalaryStatisticsCard from '../../../components/SalaryStatsCard';
 import WhatWillYouGet from '../../../components/WhatWillYouGetCard';
+import StatsCard from '../../../components/StatsBar';
 
 const GuidePage = ({ params }) => {
   const router = useRouter();
@@ -27,10 +28,13 @@ const GuidePage = ({ params }) => {
           Become a top 1% <span className="text-[#4D9CFF]">Next.js 14</span><br className="hidden sm:inline" />
           developer in only one course
         </h1>
-        
-        <p className="text-lg sm:text-xl text-center text-gray-400">
-          Escape the shallow content & dive deep into the hottest tech of 2024
-        </p>
+    
+        <div className="bg-gray-900 text-white py-3 px-4 sm:px-6 flex items-center justify-center">
+            <GraduationCap className="w-6 h-6 text-emerald-400 mr-2" />
+            <p className="text-sm sm:text-base font-medium">
+                <span className="text-emerald-400 font-bold">976+ developers</span> bought this week
+            </p>
+        </div>
         
         <div className="relative w-full aspect-[16/9] mt-8 sm:mt-12">
           <Image
@@ -70,7 +74,7 @@ const GuidePage = ({ params }) => {
             </div>
           </div>
           
-          <div className="flex flex-col items-center space-y-2">
+          <div className="flex flex-col space-y-2">
             <p className="flex items-center text-white ">
               <CheckCircle className="mr-2" size={20} />
               30-day money-back guarantee
@@ -89,6 +93,13 @@ const GuidePage = ({ params }) => {
         </div>
         <PremiumSalaryStatisticsCard/>
         <WhatWillYouGet/>
+        {/* Centering the button */}
+        <div className="flex flex-col justify-center">
+        <p className="text-[#4ADE80] text-center font-semibold mt-2">Save {percentageSaved}% Today!</p>
+          <button className="mt-4 px-8 py-4 bg-gradient-to-r from-[#4ADE80] to-[#2B7A4D] rounded-full text-white font-bold text-lg shadow-md focus:outline-none focus:ring-2 focus:ring-[#4ADE80] focus:ring-opacity-50 lg:w-1/2 lg:self-center">Get Today Only ₹299</button>
+        </div>
+        {/* CTA Button  */}
+        <StatsCard/>
         <ReviewsSection/>
       </div>
     </div>
