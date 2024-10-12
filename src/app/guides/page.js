@@ -1,5 +1,6 @@
 "use client"
-import Image from 'next/image'
+import Image from 'next/image';
+import Link from 'next/link';
 import { useState, useEffect } from 'react'
 
 const courses = [
@@ -9,6 +10,7 @@ const courses = [
     price: "₹9,675",
     discountedPrice: "₹7,425",
     image: "/placeholder.svg",
+    slug: 'javascript',
     bonus: "BONUS #2 - DEPRECATED COURSE"
   },
   {
@@ -17,6 +19,7 @@ const courses = [
     price: "₹12,675",
     discountedPrice: "₹9,675",
     image: "/placeholder.svg",
+    slug: 'react',
     bonus: "BONUS #3 - DEPRECATED COURSE"
   },
   {
@@ -25,6 +28,7 @@ const courses = [
     price: "₹18,525",
     discountedPrice: "₹14,925",
     image: "/placeholder.svg",
+    slug: 'node',
     bonus: "BONUS #4 - DEPRECATED COURSE"
   },
   // ... (remaining courses with the same price as
@@ -43,7 +47,7 @@ const faqs = [
 ]
 
 export default function CoursePage() {
-  const [timeLeft, setTimeLeft] = useState(3 * 3600); // Default to 3 hours
+  const [timeLeft, setTimeLeft] = useState(0);
   const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
@@ -51,11 +55,16 @@ export default function CoursePage() {
     const savedTime = sessionStorage.getItem('timerValue');
     if (savedTime) {
       setTimeLeft(parseInt(savedTime, 10));
+    } else {
+      // Generate a random time between 1 second and 3 hours (10,800 seconds)
+      const randomTime = Math.floor(Math.random() * 10800) + 1;
+      setTimeLeft(randomTime);
+      sessionStorage.setItem('timerValue', randomTime.toString());
     }
 
     const timer = setInterval(() => {
       setTimeLeft(prevTime => {
-        const newTime = prevTime > 0 ? prevTime - 1 : 3 * 3600;
+        const newTime = prevTime > 0 ? prevTime - 1 : 0;
         sessionStorage.setItem('timerValue', newTime.toString());
         return newTime;
       });
@@ -126,7 +135,11 @@ export default function CoursePage() {
                     Save {Math.round((1 - parseFloat(course.discountedPrice.slice(1)) / parseFloat(course.price.slice(1))) * 100)}%
                   </div>
                 </div>
-                <button className="bg-[#4ade80] text-black font-bold py-2 px-4 rounded-full hover:bg-[#3cbe6e] transition duration-300">Learn More</button>
+                <Link href={`/guides/${course.slug}`} state={{ course: course }} className="block">
+                  <button className="w-full bg-[#4ade80] text-black font-bold py-2 px-4 rounded-full hover:bg-[#3cbe6e] transition duration-300">
+                    Learn More
+                  </button>
+                </Link>
               </div>
             </div>
           ))}

@@ -17,7 +17,7 @@
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Poppins, Arial, Helvetica, sans-serif;
 }
 
 @layer utilities {
@@ -47,5 +47,19 @@ body {
 
 .animation-delay-2000 {
   animation-delay: 2s;
+}
+
+/* Add this CSS for the shake animation */
+@keyframes shake {
+  0% { transform: translate(0); }
+  25% { transform: translate(-5px, 0); }
+  50% { transform: translate(5px, 0); }
+  75% { transform: translate(-5px, 0); }
+  100% { transform: translate(0); }
+}
+
+.animate-shake {
+  animation: shake 0.5s infinite;
+  animation-delay: 3s; /* Start shaking every 3 seconds */
 }
 
