@@ -14,6 +14,10 @@ const Header = () => {
     setIsMenuOpen(!isMenuOpen)
   }
 
+  const closeMenu = () => {
+    setIsMenuOpen(false)
+  }
+
   const headerStyle = {
     boxShadow: '0 4px 6px -1px rgba(0, 123, 255, 0.1), 0 2px 4px -1px rgba(0, 123, 255, 0.06)'
   };
@@ -45,7 +49,7 @@ const Header = () => {
       {isMenuOpen && (
         <nav className="md:hidden mt-4 flex flex-col space-y-4 px-4 md:px-8">
           {NAV_LINKS.map((link) => (
-            <Link key={link.href} href={link.href} className={link.className}>
+            <Link key={link.href} href={link.href} className={link.className} onClick={closeMenu}>
               {link.label}
             </Link>
           ))}

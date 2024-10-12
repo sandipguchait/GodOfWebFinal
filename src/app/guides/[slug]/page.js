@@ -7,6 +7,7 @@ import ReviewsSection from '../../../components/Review-landing';
 import PremiumSalaryStatisticsCard from '../../../components/SalaryStatsCard';
 import WhatWillYouGet from '../../../components/WhatWillYouGetCard';
 import StatsCard from '../../../components/StatsBar';
+import BonusesUI from '../../../components/BonusUI';
 
 const GuidePage = ({ params }) => {
   const router = useRouter();
@@ -25,14 +26,14 @@ const GuidePage = ({ params }) => {
         </p>
         
         <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-center leading-tight">
-          Become a top 1% <span className="text-[#4D9CFF]">Next.js 14</span><br className="hidden sm:inline" />
+          Become a top 1% <span className="text-[#4D9CFF]">Next.js 14</span> <br className="hidden sm:inline" />
           developer in only one course
         </h1>
     
         <div className="bg-gray-900 text-white py-3 px-4 sm:px-6 flex items-center justify-center">
             <GraduationCap className="w-6 h-6 text-emerald-400 mr-2" />
             <p className="text-sm sm:text-base font-medium">
-                <span className="text-emerald-400 font-bold">976+ developers</span> bought this week
+              <span className="text-emerald-400 font-bold">976+ developers</span> bought this week
             </p>
         </div>
         
@@ -100,6 +101,7 @@ const GuidePage = ({ params }) => {
         </div>
         {/* CTA Button  */}
         <StatsCard/>
+        <BonusesUI/>
         <ReviewsSection/>
       </div>
     </div>

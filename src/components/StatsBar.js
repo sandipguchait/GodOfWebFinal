@@ -3,7 +3,7 @@ import { ChevronDown } from 'lucide-react';
 export default function StatisticsBar() {
     return (
         <>
-            <h2 class="text-2xl sm:text-3xl font-bold text-center flex items-center justify-center">What you can expect
+            <h2 className="text-2xl sm:text-3xl font-bold text-center flex items-center justify-center">What you can expect
             <ChevronDown className="w-8 h-8 ml-2" />
             </h2>
             <div className="w-full max-w-4xl bg-gray-800 rounded-lg shadow-2xl overflow-hidden">
