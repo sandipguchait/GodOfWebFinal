@@ -8,6 +8,8 @@ import PremiumSalaryStatisticsCard from '../../../components/SalaryStatsCard';
 import WhatWillYouGet from '../../../components/WhatWillYouGetCard';
 import StatsCard from '../../../components/StatsBar';
 import BonusesUI from '../../../components/BonusUI';
+import EndingCTA from '../../../components/EndingCTA';
+import GuaranteeBanner from '../../../components/GuaranteeBanner';
 
 const GuidePage = ({ params }) => {
   const router = useRouter();
@@ -61,9 +63,9 @@ const GuidePage = ({ params }) => {
               <span className="text-4xl font-bold text-[#4D9CFF]">₹{discountedPrice}</span>
             </div>
             <p className="text-[#4ADE80] font-semibold mt-2">Save {percentageSaved}% Today!</p>
-            <button className={`mt-4 px-8 py-4 bg-gradient-to-r from-[#4ADE80] to-[#2B7A4D] rounded-full text-white font-bold text-lg shadow-md focus:outline-none focus:ring-2 focus:ring-[#4ADE80] focus:ring-opacity-50`}>
-              Get Yours Now!
-            </button>
+            <button className="mt-4 px-8 py-4 text-xl font-bold rounded-full bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
+            Get yours now!
+          </button>
             
             <div className="flex items-center justify-center mt-4 text-white">
               <p className="text-lg">3670+ sold</p>
@@ -94,15 +96,27 @@ const GuidePage = ({ params }) => {
         </div>
         <PremiumSalaryStatisticsCard/>
         <WhatWillYouGet/>
-        {/* Centering the button */}
-        <div className="flex flex-col justify-center">
-        <p className="text-[#4ADE80] text-center font-semibold mt-2">Save {percentageSaved}% Today!</p>
-          <button className="mt-4 px-8 py-4 bg-gradient-to-r from-[#4ADE80] to-[#2B7A4D] rounded-full text-white font-bold text-lg shadow-md focus:outline-none focus:ring-2 focus:ring-[#4ADE80] focus:ring-opacity-50 lg:w-1/2 lg:self-center">Get Today Only ₹299</button>
-        </div>
+        {/* CTA button */}
+            <div className="flex flex-col justify-center">
+            <p className="text-[#4ADE80] text-center font-semibold mt-2">Save {percentageSaved}% Today!</p>
+            <button className="mt-4 px-8 py-4 text-xl font-bold rounded-full bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl lg:w-1/2 lg:self-center">
+                Get Now for ₹299
+            </button>
+            </div>
         {/* CTA Button  */}
         <StatsCard/>
         <BonusesUI/>
+        <EndingCTA/>
         <ReviewsSection/>
+        {/* CTA button */}
+            <div className="flex flex-col justify-center">
+            <p className="text-[#4ADE80] text-center font-semibold mt-2">Save {percentageSaved}% Today!</p>
+            <button className="mt-4 px-8 py-4 text-xl font-bold rounded-full bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl lg:w-1/2 lg:self-center">
+                Get Now for ₹299
+            </button>
+            </div>
+        {/* CTA Button  */}
+        <GuaranteeBanner/>
       </div>
     </div>
   );

@@ -75,7 +75,7 @@ const ReviewCard = ({ review }) => {
 
  const ReviewsSection = ( props ) => {
   return (
-    <section className="bg-[#181c31] py-8 md:py-16">
+    <section className="bg-[#181c31] pt-8 md:pt-16 pb-5">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-8">The reviews are in.</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">

@@ -54,10 +54,8 @@ export default function Footer() {
         </div>
         
         <div className="border-t border-gray-800 pt-8 flex flex-col items-center">
-          <div className="flex flex-wrap justify-center gap-4 mb-4">
-            <Link href="/language" className="text-gray-400 hover:text-white transition-colors duration-300">English</Link>
-            <Link href="/privacy" className="text-gray-400 hover:text-white transition-colors duration-300">Privacy Policy</Link>
-            <Link href="/support" className="text-gray-400 hover:text-white transition-colors duration-300">Support</Link>
+          <div className="flex flex-wrap justify-center gap-4 mb-4 text-gray-400">
+            This site is not part of and/or endorsed by Facebook™. Facebook™ is a trademark of Facebook™, Inc.
           </div>
           <p className="text-gray-400 text-center mb-4">© 2024 Solid. All rights reserved</p>
           <div className="flex space-x-6">

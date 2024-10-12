@@ -1,5 +1,5 @@
-import React from 'react'
-import { Gift, Atom, Rocket, Cpu, Laptop, Image, MessageSquare } from 'lucide-react'
+import React from 'react';
+import { Gift, Atom, Rocket, Cpu, Laptop, Image, MessageSquare } from 'lucide-react';
 
 export default function BonusesUI() {
   return (
